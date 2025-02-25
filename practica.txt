@@ -1,0 +1,3 @@
+Actividad 1:  x-assets/UF1841/html.video.audio.png (gestion de video youtube y subir un archivo)
+Actividad 2:  Agragar un avatar y/ PDF de CV al portal de empleo
+Actividad 3:  Incluir una imagen dentro de la zona de chatGPT

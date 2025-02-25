@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        color: black;
+        background-color: green;
+        text-align: center;
+    }
+
+    footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0; 
+        width: 300;  
+        color:  white;
+        background-color: green;
+        text-align: center;
+
+    }
+
+    section {
+        position: absolute;
+        top: 130px;
+    }
+    .section-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+    gap: 10px; /* Space between items */
+    padding: 10px; /* Padding around the gallery */
+    }
+
+    .gallery-item {
+    padding: 5px; /* Padding inside each item */
+    overflow: hidden; /* Prevents overflow of images */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+
+
+</style>
+
+<header>
+    <h1>Plataforma de Capacitacion Empresarial</h1>
+    <h4 id="subheader">Accede a los materiales multimedia para mejorar tus habilidades personales</h4>
+</header>
+
+<section class="section-container">
+
+    <video width="300" height="100" controls>
+        <source src="assets/videos/biblioteca.mp4" type="video/mp4">
+        Tu navegador no soporta los vídeos de HTML5
+    </video>
+
+    <div class="gallery-item">
+        <h1>1. Video de Capacitación - Gestión de Proyectos</h1>
+   Aprende los fundamentos de la gestion de proyectos a traves
+   de este video de capacitacion.
+   Ideal para profesionales que desean mejorar sus habilidades.   
+    </div>
+
+    <div class="gallery-item">
+        <h1>2. Audio de Capacitación - Podcat sobre Liderazgo</h1> 
+        Escucha nuestro Podcast sobre liderazgo empresarial.
+        Aprende cómo ser un lider eficaz en el entorno empresarial actual.
+    </div>
+
+    <audio controls>
+        <source src="assets/sonidos/risa.mp3" >
+    </audio>
+    
+
+</section>
+
+
+<footer>
+    <p> &c 2025 Plataforma de Capacitacion Empresarial. Todos los derechos Reservados.</p>
+
+</footer>
+
+<body>
+    
+</body>
+</html>
