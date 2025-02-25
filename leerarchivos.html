@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leer Archivo</title>
+
+    <style>
+        #fileContent {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            white-space: pre-wrap; /* Preserve whitespace */
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Leer un archivo de texto</h1>
+
+    <h2>Seleccionar un archivo para ver</h2>
+    <input type="file" name="fileupload" id = "fileupload" accept=".txt" required onchange="readFile()">
+
+    <div id="resultado"></div>
+
+
+    <script>
+        // leer archivo y mostrar resultado
+        function readFile() {
+            const fileupload = document.getElementById("fileupload");
+            const div = document.getElementById("resultado");
+            const file = fileupload.files[0];
+            
+
+            if (file) {
+                // paso 1 Instanciar
+                const reader = new FileReader();
+
+
+
+                reader.onload = function(e) {
+                    console.log("Todo va bien");
+                    div.textContent = e.target.result;
+                };
+
+                reader.onerror = function(e) {
+                    console.log("Error de lectura");
+                    // asi fallaba div.innerHTML = "error al subir el archivo";
+                    div.textContent = 'Error al leer el archivo.';
+                };
+
+                reader.readAsText(file);
+            } else {
+                div.textContent = 'No se ha seleccionado ningún archivo.';
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>
