@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Bienvenido 
+        <div id="nombre">NAME</div>
+    </h1>
+
+    <h1>En 10 años tendras 
+        <div id="edad">EDAD</div>
+    </h1>
+    
+
+    <h1>y viviras en
+    <div id="ciudad">CIUDAD</div>
+    </h1>
+
+    <script>
+        // captar queryString y plasmarloen la pagina
+
+        const params = new URLSearchParams(window.location.search);
+        console.log(params)
+
+    if (params.has('nombre')) {
+
+        const nombre = params.get('nombre');
+        console.log(nombre)
+        document.getElementById("nombre").textContent = nombre
+    }
+
+    if (params.has('edad')) {
+        let edad = params.get('edad');
+        let edad1 = parseInt(edad)+10
+        console.log(edad)
+        document.getElementById("edad").textContent = edad1
+    }
+
+    if (params.has('ciudad')) {
+        const ciudad = params.get('ciudad');
+        console.log(edad)
+        document.getElementById("ciudad").textContent = ciudad
+    }
+
+
+    </script>
+    
+</body>
+</html>

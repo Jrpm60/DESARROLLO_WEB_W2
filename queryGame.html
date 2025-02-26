@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #4caf50;
+        }
+        #result {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉 Guess the Number! 🎉</h1>
+    <p>Try to guess the secret number between 1 and 10.</p>
+    <p id="result">Waiting for your guess...</p>
+
+    <script>
+        // Secret number (you can change this to any number between 1 and 10)
+        const secretNumber = 7;
+
+        // Obtener el query string de la URL
+
+        const params = new URLSearchParams(window.location.search);
+        console.log(params)        
+
+        // Mostrar el resultado basado en el intento si (if) es correcto o no
+
+        if (params.has("result")) {
+            const result = params.get('result');
+
+            if (parseInt(result) === secretNumber) {
+                document.getElementById("result").textContent = `🎉 Congratulations! ${result} is correct! 🎉`;
+            } 
+            
+            else {
+                document.getElementById("result").textContent = `❌ Sorry, ${result} is wrong. Try again!`;
+            }
+        }
+        
+              
+        
+
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+        @keyframes moveright {
+            from{transform: translatex(0);}
+            to{transform: translatex(100px);}
+        }
+
+        @keyframes fadeInMove {
+            0% {
+                opacity: 0;
+                background-color: aliceblue;
+                transform: translateY(300px) translatex(300px);
+            }
+            
+            25% {
+                opacity: 0.5;
+                background-color: pink;
+                transform: translateY(300px) translatex(0px);
+            }
+            
+            100% {
+                opacity: 1;
+                background-color: rgb(153, 112, 230);
+            }
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: aquamarine;
+            animation-name: fadeInMove;
+            animation-duration: 3s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+
+
+</style>
+
+<body>
+    
+    <div>Hola</div>
+    
+</body>
+</html>
