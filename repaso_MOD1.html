@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso Modulo 1. </title>
+</head>
+
+
+
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    h5 {
+        color: chartreuse;
+        background-color: brown;
+    }
+
+    tr:nth-child(even) {
+        background-color: grey;
+    }
+
+    tr:last-child {
+        color: aquamarine;
+        background-color: blueviolet;
+    }
+
+    .contenedor {
+        display: grid;   
+        grid-template-columns: repeat(3, 1fr); /* 3 Columnas Iguales */    
+        color: black;
+        background-color: rgb(127, 146, 255);
+        
+        gap: 10px;
+        padding: 10px;
+        box-shadow: inset;
+    }
+
+</style>
+
+<body>
+    <h1>Bienvenido a la actividad de revision</h1>
+    <h4>Gestionar las tareas a traves de un Kanban Board (github proyects)</h4>
+
+<h5>Imagen con vinculo WEB</h5>
+<a href="https:/github.com"> <img src="assets/images/Magoal_logo.PNG" width="100"  height="80" alt="imagen"></a>
+
+<h5>Tabla alternando color filas, ultima fondo amarillo</h5>
+
+<table id="tabla">
+    <tr>
+        <th>Nombre</th>
+        <th>Observaciones</th>
+    </tr>
+
+    <tr>
+        <td>Subijana</td>
+        <td>Akelarre</td>
+    </tr>
+
+    <tr>
+        <td>Arzak</td>
+        <td>Arzak</td>
+    </tr>
+
+    <tr>
+        <td>Daviz M</td>
+        <td>Divertxo</td>
+    </tr>
+
+    <tr>
+        <td>Francisco</td>
+        <td>Chez Paco</td>
+    </tr>
+</table>
+
+<h5>Revelar secreto</h5>
+
+<button onclick="progreso()">Pincha para obtener un secreto</button> <br>
+
+<script>
+
+    function progreso() {
+        let loading = document.getElementById("loading")
+        let message = document.getElementById("message")
+        let progress = document.getElementById("progressBar")
+
+        loading.style.display = "block"
+        let p = 0;
+        let interval = setInterval(() => { 
+
+            p=p+5;
+            progress.value=p;
+
+            if (p>= 100) { 
+                clearInterval(interval);
+                document.body.innerHTML += '<h2>✨✨ Tengo una gran SORPRESA ✨✨</h2>';
+            } 
+        },250);
+              
+    }
+
+
+</script>
+
+<h5>Flex container</h5>
+
+<div id="flex" class="contenedor" >
+    <div class="elemento">1</div>
+    <div class="elemento">2</div>
+    <div class="elemento">3</div>
+</div>
+
+
+
+
+<form action="">
+
+
+
+</form>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

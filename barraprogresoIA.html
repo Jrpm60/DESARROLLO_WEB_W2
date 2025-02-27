@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de progreso</title>
+</head>
+<body>
+    <progress id="barraProgreso" value="50" max="100"></progress>
+    <p>Progreso: <span id="valorProgreso">50</span>%</p>
+
+    <script>
+        // Opcional: Actualizar el valor de la barra de progreso con JavaScript
+        function actualizarProgreso(valor) {
+            document.getElementById("barraProgreso").value = valor;
+            document.getElementById("valorProgreso").textContent = valor;
+        }
+
+        // Ejemplo: Actualizar el progreso cada segundo
+        let progreso = 0;
+        setInterval(() => {
+            progreso += 10;
+            if (progreso <= 100) {
+                actualizarProgreso(progreso);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

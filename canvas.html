@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        canvas {
+            border: 2px solid  black;
+            cursor: pointer;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <canvas id="MyCanvas" width="500" height="500"></canvas>
+
+    <script>
+        const canvas = document.getElementById('MyCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function dibujarCaja(x,y, colorCaja) {
+            ctx.fillStyle = colorCaja;
+            ctx.fillRect(x,y,50,50);
+        }
+
+        for (let index = 0; index < 120; index++) {
+            x= Math.random() * 450;
+            y= Math.random() * 450;
+            console.log(x);
+            console.log(y);
+
+            dibujarCaja(x , y, "green");
+                
+        }
+
+        const radio=25;
+            ctx.beginPath();
+            ctx.arc(80,150,radio,0 , 2*Math.PI);
+            ctx.stroke();
+
+
+    </script>
+    
+</body>
+</html>

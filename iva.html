@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculate Total</title>
+</head>
+<body>
+
+<form id="calculationForm">
+  <label for="quantity">Quantity:</label><br>
+  <input type="number" id="quantity" name="quantity" value="0"><br><br>
+
+  <label for="price">Price:</label><br>
+  <input type="number" id="price" name="price" value="0"><br><br>
+
+  <label for="taxRate">Tax Rate (%):</label><br>
+  <input type="number" id="taxRate" name="taxRate" value="0"><br><br>
+
+  <input type="button" value="Calculate" onclick="calculateTotal()">
+</form>
+
+<p>Total: <span id="total"></span></p>
+
+<script>
+function calculateTotal() {
+  const quantity = parseFloat(document.getElementById("quantity").value);
+  const price = parseFloat(document.getElementById("price").value);
+  const taxRate = parseFloat(document.getElementById("taxRate").value);
+
+  const total = quantity * (1+taxRate)
+
+  document.getElementById("total").innerText = total;
+}
+</script>
+
+</body>
+</html>
