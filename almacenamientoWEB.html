@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Notas Simples Archivadas en Local Storage</h1>
+    <input id="nota" type="text">
+        <button onclick="guardarnota();">Guardar Nota</button>
+        <button onclick="borrarnota();">Borrar Nora</button>
+        <button onclick="mostrarnota();">Mostrar Nota</button>
+
+
+    <script>
+        function guardarnota() {
+
+            var nota = document.getElementById('nota').value;
+            console.log(nota);
+            const noteValue = localStorage.setItem('n2',nota);
+        }
+        function mostrarnota() {
+            const valornota = localStorage.getItem("n2");
+            console.log(valornota);
+        }
+     </script>
+
+     <h1>Nota guardada:</h1>
+
+     <div>
+
+        
+        
+     </div>
+
+    
+
+
+
+
+    
+</body>
+</html>

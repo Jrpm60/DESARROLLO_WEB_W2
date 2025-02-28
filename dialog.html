@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    dialog:open {
+        background-color: red;
+    }
+
+    dialog:backdrop {
+        background-color: chartreuse;
+    }
+
+
+</style>
+</head>
+<body>
+
+    <button onclick="abrirDialog();">Open Dialog</button>
+
+    <dialog id="dialogBox">
+
+        <p>Este es mi promer dialogo</p>
+        
+        <form method="dialog">
+            <button id="b1" value="1">1</button>
+            <button id="b2" value="2">2</button>
+            <button id="b3" value="3">3</button>
+            <button id="b4" value="4">4</button>
+            <button id="b5" value="5">5</button>
+        </form>
+
+        <script>
+            var b1 = document.getElementById(b1).value()
+
+        </script>
+    
+
+
+
+    </dialog>
+
+
+
+
+    <script>
+        function abrirDialog(){   
+        const d = document.getElementById("dialogBox");
+        d.showModal();
+        }
+    </script>
+
+
+    
+</body>
+</html>

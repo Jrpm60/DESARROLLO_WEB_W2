@@ -29,21 +29,21 @@
             ctx.fillRect(x,y,50,50);
         }
 
-        for (let index = 0; index < 120; index++) {
+        for (let index = 0; index < 50; index++) {
             x= Math.random() * 450;
             y= Math.random() * 450;
             console.log(x);
             console.log(y);
 
-            dibujarCaja(x , y, "green");
-                
+            dibujarCaja(x , y, 255,255,255,0);
+
+            ctx.beginPath();
+            ctx.arc(x,y,25,0 , 2*Math.PI);
+            ctx.stroke();
+             
         }
 
-        const radio=25;
-            ctx.beginPath();
-            ctx.arc(80,150,radio,0 , 2*Math.PI);
-            ctx.stroke();
-
+        
 
     </script>
     
